@@ -4,63 +4,75 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="261.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CountDownTimer.Controller">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="271.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="155.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="88.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
-  </rowConstraints>
-   <children>
-      <GridPane prefHeight="156.0" prefWidth="410.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <GridPane GridPane.halignment="CENTER">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="105.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Label fx:id="lbl_SecondsDisplay" alignment="CENTER" contentDisplay="CENTER" layoutX="157.0" layoutY="32.0" prefHeight="53.0" prefWidth="98.0" text="00" textAlignment="CENTER" textFill="#f56353" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-                     <font>
-                        <Font size="73.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="lbl_MinutesDisplay" alignment="CENTER" contentDisplay="CENTER" prefHeight="53.0" prefWidth="98.0" text="00" textAlignment="CENTER" textFill="#f56353" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-                     <font>
-                        <Font size="73.0" />
-                     </font>
-                  </Label>
-                  <Label text="MINUTES" GridPane.halignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="49.0" layoutY="13.0" text="SECONDS" GridPane.columnIndex="1" GridPane.halignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
-               </children>
-            </GridPane>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-               <children>
-                  <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="173.0" text="Setting your pordomo time" />
-                  <ChoiceBox fx:id="cb_TimerSelection" layoutX="189.0" layoutY="1.0" onAction="#returnTimeValue" prefHeight="25.0" prefWidth="60.0" />
-               </children></Pane>
-         </children>
-      </GridPane>
-      <Button fx:id="btn_Start" mnemonicParsing="false" onAction="#startTimer" text="START" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-   </children>
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          prefHeight="190.0" prefWidth="261.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="CountDownTimer.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="271.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="155.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="88.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <GridPane prefHeight="156.0" prefWidth="410.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <GridPane GridPane.halignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="105.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="lbl_SecondsDisplay" alignment="CENTER" contentDisplay="CENTER" layoutX="157.0"
+                               layoutY="32.0" prefHeight="53.0" prefWidth="98.0" text="00" textAlignment="CENTER"
+                               textFill="#f56353" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                               GridPane.rowIndex="1">
+                            <font>
+                                <Font size="73.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="lbl_MinutesDisplay" alignment="CENTER" contentDisplay="CENTER" prefHeight="53.0"
+                               prefWidth="98.0" text="00" textAlignment="CENTER" textFill="#f56353"
+                               GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="73.0"/>
+                            </font>
+                        </Label>
+                        <Label text="MINUTES" GridPane.halignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="12.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="49.0" layoutY="13.0" text="SECONDS" GridPane.columnIndex="1"
+                               GridPane.halignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="12.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </GridPane>
+                <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                    <children>
+                        <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="173.0"
+                               text="Setting your pordomo time"/>
+                        <ChoiceBox fx:id="cb_TimerSelection" layoutX="189.0" layoutY="1.0" onAction="#returnTimeValue"
+                                   prefHeight="25.0" prefWidth="60.0"/>
+                    </children>
+                </Pane>
+            </children>
+        </GridPane>
+        <Button fx:id="btn_Start" mnemonicParsing="false" onAction="#startTimer" text="START"
+                GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+    </children>
 </GridPane>

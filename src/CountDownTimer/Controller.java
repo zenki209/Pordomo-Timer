@@ -48,10 +48,10 @@ public class Controller {
         int seconds = Integer.parseInt(timer.getSeconds());
         int minutes = Integer.parseInt(timer.getMinutes());
         if (minutes == 0) {
+            timeline.stop();
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("You should take a break !!!!");
             Platform.runLater(alert::showAndWait);
-            timeline.stop();
         } else {
             if (seconds == 0) {
                 minutes--;
@@ -61,8 +61,11 @@ public class Controller {
             }
             timer.setMinutes(String.valueOf(minutes));
             timer.setSeconds(String.valueOf(seconds));
-            lbl_MinutesDisplay.setText(timer.getMinutes());
-            if (seconds != 60) {
+            if (minutes > 1 ) {
+                int temp = minutes - 1;
+                lbl_MinutesDisplay.setText(String.valueOf(temp));
+            }  else { lbl_MinutesDisplay.setText("00");}
+            if (seconds != 60 && seconds > 0) {
                 lbl_SecondsDisplay.setText(timer.getSeconds());
             } else {
                 lbl_SecondsDisplay.setText("00");
